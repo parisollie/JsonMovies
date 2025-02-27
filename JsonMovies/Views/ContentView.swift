@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //Vid 349, paso 1
+        //V-349, paso 1.1 ponemos el Home
         Home()
     }
 }

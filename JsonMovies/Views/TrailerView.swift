@@ -7,17 +7,17 @@
 
 
 import SwiftUI
-//Vid 357 ,incrustacion de un video.
+//V-357,incrustacion de un video.
 import WebKit
 struct TrailerView: View {
     
-    /*p1aso 34, esperamos que esto funcione como parámetro que seria lo mismo que -var id : string-
+    /*Paso 1.34, esperamos que esto funcione como parámetro que seria lo mismo que -var id : string-
     espera un MoviesViewModel como dato*/
     @StateObject var movies : MoviesViewModel
     
     
     var body: some View {
-        //Paso 43, ponemos el video.
+        //Paso 1.43, ponemos el video.
         ZStack{
             Color.black.edgesIgnoringSafeArea(.all)
             VideoView(videoID: movies.key)
@@ -26,17 +26,17 @@ struct TrailerView: View {
                 .cornerRadius(12)
                 .padding(.all)
                 .task {
-                    //Paso 44
+                    //Paso 1.44
                     await movies.fetchVideo()
                 }
         }
     }
 }
 
-//Vid 357-Paso 42,incrustar un video de yotube en nuestra app
+//V-357 Paso 1.42,incrustar un video de yotube en nuestra app
 
 struct VideoView: UIViewRepresentable {
-    
+    //Para la clave del JSON
     let videoID : String
     
     func makeUIView(context: Context) -> WKWebView {

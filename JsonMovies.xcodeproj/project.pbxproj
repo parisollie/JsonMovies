@@ -65,7 +65,6 @@
 				9BC956472C5AADD4006978DA /* Models */,
 				9BC956462C5AADC9006978DA /* Views */,
 				9BC956382C5AAD90006978DA /* JsonMoviesApp.swift */,
-				9BC9563A2C5AAD90006978DA /* ContentView.swift */,
 				9BC9563C2C5AAD95006978DA /* Assets.xcassets */,
 				9BC9563E2C5AAD95006978DA /* Preview Content */,
 			);
@@ -84,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9BC956492C5AAE1A006978DA /* Home.swift */,
+				9BC9563A2C5AAD90006978DA /* ContentView.swift */,
 				9BC9564B2C5AAF80006978DA /* MoviesView.swift */,
 				9BC9564F2C5AB02A006978DA /* TrailerView.swift */,
 			);
