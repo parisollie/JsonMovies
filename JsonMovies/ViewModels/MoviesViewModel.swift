@@ -24,8 +24,13 @@ class MoviesViewModel: ObservableObject {
     func fetch(movie:String) async {
         //Paso 1.18, hacemos nuestro Do-Catch
         do{
+            //Para mi variable de entorno
+            let apiKey = ProcessInfo.processInfo.environment["TMDB_API_KEY"] ?? ""
             //Ponemos un let, donde ira nuestra ruta.
-            let urlString = "https://api.themoviedb.org/3/search/movie?api_key=98318564922497e017997cb6e72f5948&language=en-US&query=\(movie)&page=1&include_adult=false"
+            let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=\(movie)&page=1&include_adult=false"
+            print("API Key: \(apiKey)")
+
+
             
             //Paso 1.19,ponemos la url
             /* .addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? "")
@@ -54,8 +59,10 @@ class MoviesViewModel: ObservableObject {
     //Paso 1.39, copiamos la misma funcion
     func fetchVideo() async {
         do{
+            //Mi Variable de entorno
+            let apiKey = ProcessInfo.processInfo.environment["TMDB_API_KEY"] ?? ""
             //para buscar la pelicula
-            let urlString = "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=98318564922497e017997cb6e72f5948&language=en-US"
+            let urlString = "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=\(apiKey)&language=en-US"
             
             guard let url = URL(string: urlString) else { return }
             let (data, _) = try await URLSession.shared.data(from: url)

@@ -50,6 +50,13 @@
             ReferencedContainer = "container:JsonMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "TMDB_API_KEY"
+            value = "98318564922497e017997cb6e72f5948"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
