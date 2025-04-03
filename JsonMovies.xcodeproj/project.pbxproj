@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4C77B52D9E1EE9003AA330 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C77B42D9E1EE9003AA330 /* CardView.swift */; };
 		9BC956392C5AAD90006978DA /* JsonMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC956382C5AAD90006978DA /* JsonMoviesApp.swift */; };
 		9BC9563B2C5AAD90006978DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC9563A2C5AAD90006978DA /* ContentView.swift */; };
 		9BC9563D2C5AAD95006978DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC9563C2C5AAD95006978DA /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A4C77B42D9E1EE9003AA330 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9BC956352C5AAD90006978DA /* JsonMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC956382C5AAD90006978DA /* JsonMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMoviesApp.swift; sourceTree = "<group>"; };
 		9BC9563A2C5AAD90006978DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				9BC9563A2C5AAD90006978DA /* ContentView.swift */,
 				9BC9564B2C5AAF80006978DA /* MoviesView.swift */,
 				9BC9564F2C5AB02A006978DA /* TrailerView.swift */,
+				8A4C77B42D9E1EE9003AA330 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				9BC9564A2C5AAE1A006978DA /* Home.swift in Sources */,
 				9BC956522C5AB0C7006978DA /* MoviesViewModel.swift in Sources */,
 				9BC956392C5AAD90006978DA /* JsonMoviesApp.swift in Sources */,
+				8A4C77B52D9E1EE9003AA330 /* CardView.swift in Sources */,
 				9BC9564E2C5AAFCC006978DA /* Movies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JsonMovies/Preview Content\"";
-				DEVELOPMENT_TEAM = BN7VKM9KUJ;
+				DEVELOPMENT_TEAM = 4PM3S5C4M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -340,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JsonMovies/Preview Content\"";
-				DEVELOPMENT_TEAM = BN7VKM9KUJ;
+				DEVELOPMENT_TEAM = 4PM3S5C4M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
