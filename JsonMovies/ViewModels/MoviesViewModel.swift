@@ -37,15 +37,16 @@ class MoviesViewModel: ObservableObject {
              Le ponemos esto,para que pueda leer los espacios porque sino nos marcaria error : The Batman., de
              esta manera ya puede leer el espacio.*/
             guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? "") else { return }
-            /*Paso 1.20 ,ponemos un let data y  try await , trata de tarerme esta api,pero espera la respuesta,pero espera.
+            /*Paso 1.20 ,ponemos un let data y  try await , trata de traerme esta api,pero espera la respuesta,pero espera.
             Cuando usamos async le debemos poner el await.*/
             let (data, _) = try await URLSession.shared.data(from: url)
+            
             /*Paso 1.21,primero traemos Movies para que despleque el resultado
             trae,ponemos Movies,porque primero necesitamos entrar ahi para desplegar los resultados
              y la data que tenemos arriba, el la línea 35.*/
             let json = try JSONDecoder().decode(Movies.self, from: data)
             
-            //Vid  353,paso 1.29, con esto llevamos el array de results.
+            //V-353,paso 1.29, con esto llevamos el array de results.
             self.dataMovies = json.results
             
             //Imprimimos los resultados

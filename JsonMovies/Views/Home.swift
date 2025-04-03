@@ -7,17 +7,19 @@
 
 
 import SwiftUI
-//V-349,creamos la vista Home
+//Creamos la vista Home
 struct Home: View {
+    
     //V-350,Paso 1.4, ponemos 2 variables, para buscar.
     @State private var search = ""
     /*
        Aqui mandaremos a llamar a la siguiente vista, pero sin utilizar un tipo de valor como lo hacemos
     con el NavigationStack*/
+    
     @State private var buscar = false
     
     var body: some View {
-       //V-349,Paso 1.2
+       //Paso 1.2,ponemos el navigation
         NavigationStack{
             ZStack {
                 //Paso 1.3,haremos un degradado con este código.
@@ -57,8 +59,9 @@ struct Home: View {
                         MoviesView(movie: search)
                     }
                     //Paso 1.12, ponemos un padding all y le ponemos su título.
-                }.padding(.all)
-                    .navigationTitle("App Movie Search")
+                }
+                .padding(.all)
+                .navigationTitle("App Movie Search")
             }
         }
     }

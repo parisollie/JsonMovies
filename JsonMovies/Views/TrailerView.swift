@@ -11,7 +11,7 @@ import SwiftUI
 import WebKit
 struct TrailerView: View {
     
-    /*Paso 1.34, esperamos que esto funcione como parámetro que seria lo mismo que -var id : string-
+    /*Paso 1.34, esperamos que esto funcione como parámetro que sería lo mismo que -var id : string-
     espera un MoviesViewModel como dato*/
     @StateObject var movies : MoviesViewModel
     
@@ -26,7 +26,7 @@ struct TrailerView: View {
                 .cornerRadius(12)
                 .padding(.all)
                 .task {
-                    //Paso 1.44
+                    //Paso 1.44- Final
                     await movies.fetchVideo()
                 }
         }

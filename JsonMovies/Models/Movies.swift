@@ -26,6 +26,7 @@ struct Result: Codable, Identifiable {
     //Los campos que usaremos son estos y deben llamarse como estan en la api.
     let id: Int
     let original_title : String
+    
     //Vid 352,le pone opcional(?) porque no sabe si vendra ese dato o no , a veces las apis no tienen todos los datos.
     let poster_path : String?
     //sipnosis

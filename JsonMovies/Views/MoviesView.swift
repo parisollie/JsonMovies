@@ -10,6 +10,7 @@ import SwiftUI
 struct MoviesView: View {
     //V-350,paso 1.7,nuestros párametros 
     var movie : String
+    
     //Paso 1.22,ponemos movies a nuestro modelo.
     @StateObject var movies = MoviesViewModel()
     
@@ -50,7 +51,7 @@ struct MoviesView: View {
 
 
 #Preview {
-    MoviesView(movie: "Inception")
+    MoviesView(movie: "Batman")
         .environmentObject(MoviesViewModel()) // Asegura que el ViewModel esté disponible
 }
 

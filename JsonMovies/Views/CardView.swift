@@ -17,8 +17,9 @@ struct CardView: View {
     
     var body: some View {
         /*Paso 1.26, creamos la card para el póster de la imagen.
-        El texto será alineado a la izquierda.*/
-        VStack(alignment: .leading, spacing: 10) { // 🔹 Espaciado entre elementos
+        El texto será alineado a la izquierda.
+        🔹 Espaciado entre elementos*/
+        VStack(alignment: .leading, spacing: 10) {
             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w200/\(poster)")) { image in
                 image.resizable()
                     .scaledToFill() // 🔹 Mejor ajuste visual
@@ -50,7 +51,7 @@ struct CardView: View {
         .background(Color(UIColor.systemBackground)) // 🔹 Mejor integración con el fondo
         .cornerRadius(12)
         .shadow(radius: 5) // 🔹 Sombra para destacar la tarjeta
-        //Paso 1.28, al momento de tocar le ponemos una acción para poder mostrar el video.
+        //Paso 1.28, al momento de tocar el poster le ponemos una acción para poder mostrar el video.
         .onTapGesture {
             action()
         }
