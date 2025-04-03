@@ -10,32 +10,49 @@ import SwiftUI
 //V-353,Paso 1.25,para poner el póster de las películas.
 struct CardView: View {
     
-    var poster : String
-    var title : String
+    var poster: String
+    var title: String
     var overview: String
-    var action : () -> Void
+    var action: () -> Void
     
     var body: some View {
-        /*Paso 1.26, creamos la card para el póster de la imágen.
-        El texto será alineado a la izqierda.*/
-        VStack(alignment: .leading){
-            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w200/\(poster)")){ image in
+        /*Paso 1.26, creamos la card para el póster de la imagen.
+        El texto será alineado a la izquierda.*/
+        VStack(alignment: .leading, spacing: 10) { // 🔹 Espaciado entre elementos
+            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w200/\(poster)")) { image in
                 image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .shadow(radius: 15)
-            }placeholder: {
-                //Paso 1.27, en caso que no tengamos imagén,le ponemos la imagén de no póster esta en assets
+                    .scaledToFill() // 🔹 Mejor ajuste visual
+                    .frame(height: 250) // 🔹 Control del tamaño
+                    .clipped() // 🔹 Evita que la imagen se desborde
+                    .cornerRadius(12) // 🔹 Bordes redondeados
+                    .shadow(radius: 8) // 🔹 Sombra más sutil
+            } placeholder: {
+                //Paso 1.27, en caso que no tengamos imagen, le ponemos la imagen de no póster que está en assets
                 Image("no_poster")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+                    .cornerRadius(12)
+                    .shadow(radius: 8)
             }
+
             Text(title)
-                .font(.title)
+                .font(.headline) // 🔹 Más compacto que .title
+                .foregroundColor(.primary) // 🔹 Soporte para modo oscuro
+
             Text(overview)
-                .foregroundColor(.blue)
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .lineLimit(3) // 🔹 Evita que el texto sea demasiado largo
+                .multilineTextAlignment(.leading) // 🔹 Mantiene la alineación izquierda
         }
-        .padding(.all)
+        .padding()
+        .background(Color(UIColor.systemBackground)) // 🔹 Mejor integración con el fondo
+        .cornerRadius(12)
+        .shadow(radius: 5) // 🔹 Sombra para destacar la tarjeta
         //Paso 1.28, al momento de tocar le ponemos una acción para poder mostrar el video.
         .onTapGesture {
-                action()
+            action()
         }
     }
 }
